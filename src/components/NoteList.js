@@ -1,5 +1,6 @@
 import React from 'react'
 import NoteItem from './NoteItem';
+import './NoteList.css'
 
 const NoteList = ({ notes, onDelete, onArchive, query }) => {
   const showNotes = notes
@@ -26,7 +27,7 @@ const NoteList = ({ notes, onDelete, onArchive, query }) => {
         <h2 className='judul-note-list'>Notes List</h2>
         <div className='container-notes'>
           {
-            showNotes.lenght > 0 ? (
+            showNotes.length > 0 ? (
               showNotes.map((note) => (
                 <NoteItem
                   key={note.id}
@@ -37,7 +38,7 @@ const NoteList = ({ notes, onDelete, onArchive, query }) => {
                 />
               ))
             ) : (
-              <p className='empty'> Empty Notes </p>
+              <p className='empty'> Empty Notes... </p>
             )
           }
         </div>
@@ -47,7 +48,7 @@ const NoteList = ({ notes, onDelete, onArchive, query }) => {
         <h2 className='judul-archive'>Archive</h2>
         <div className='container-archive'>
           {
-            NoteArchived.lenght > 0 ? (
+            NoteArchived.length > 0 ? (
               NoteArchived.map((note) => (
                 <NoteItem
                   key={note.id}
@@ -58,7 +59,7 @@ const NoteList = ({ notes, onDelete, onArchive, query }) => {
                 />
               ))
             ) : (
-              <p className='empty'>Empty Note Archive</p>
+              <p className='empty'>Empty Note Archive ...</p>
             )
           }
         </div>

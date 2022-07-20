@@ -1,0 +1,212 @@
+.notes-show{
+    width: 90%;
+    margin: 40px auto;
+    border: solid 1px #ffd600;
+    box-sizing: border-box;
+    box-shadow: inset -1px -1px 10px #ffd600;
+}
+
+.note-archive{
+    width: 90%;
+    margin: 40px auto;
+    border: solid 1px #ffd600;
+    box-sizing: border-box;
+    box-shadow: inset -1px -1px 10px #ffd600;
+}
+
+.judul-note-list{
+    color: #ffd600;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.judul-archive{
+    color: #ffd600;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.container-notes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.container-archive{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.content-card{
+    border: solid 1px #ffd600;
+    margin-bottom: 10px;
+}
+
+.container-header{
+    width: 100%;
+    border-bottom: solid 1px #ffd600;
+    margin-bottom: 10px;
+}
+
+.title{
+    text-align: center;
+    color: #ffd600;
+    margin-top: 5px;
+}
+.tanggal{
+    text-align: center;
+    color: #ffd50097;
+    font-weight: 200;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.body-note{
+    color: #ffffffd5;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.container-btn{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn-delete{
+    padding: 5px 20px;
+    border: none;
+    background-color: rgb(255, 51, 51);
+    cursor: pointer;
+    font-weight: bolder;
+    transition: all .5s ease-in-out;
+}
+
+.btn-archive{
+    padding: 5px 20px;
+    border: none;
+    background-color: #ffd800;
+    cursor: pointer;
+    font-weight: bolder;
+    transition: all .5s ease-in-out;
+}
+
+.empty{
+    color: #ffffffc9;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+.notes-show{
+    width: 80%;
+    margin: 40px auto;
+    border: solid 1px #ffd600;
+    padding-left: 30px;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: inset -1px -1px 10px #ffd600;
+}
+
+.note-archive{
+    width: 80%;
+    margin: 40px auto;
+    border: solid 1px #ffd600;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: inset -1px -1px 10px #ffd600;
+}
+
+.judul-note-list{
+    color: #ffd600;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.container-notes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.container-archive{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.card{
+    width: 30%;
+    margin: 10px 10px;
+    box-shadow: 5px 5px 10px -4px #ffd5007c;
+    transition: all .3s ease-in-out;
+}
+.card:hover{
+    box-shadow: 8px 8px 0 -4px #ffd500;
+}
+.content-card{
+    border: solid 1px #ffd600;
+    margin-bottom: 10px;
+}
+
+.container-header{
+    width: 100%;
+    border-bottom: solid 1px #ffd600;
+    margin-bottom: 10px;
+}
+
+.title{
+    text-align: center;
+    color: #ffd600;
+    margin-top: 5px;
+}
+.tanggal{
+    text-align: center;
+    color: #ffd50097;
+    font-weight: 200;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.body-note{
+    color: #ffffffd5;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.container-btn{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn-delete:hover{
+    border: solid 1px red;
+    background-color: transparent;
+    color: red;
+}
+
+.btn-archive:hover{
+    border: solid 1px #ffd600;
+    background-color: transparent;
+    color: #ffd800;
+}
+
+.empty{
+    color: #ffffffc9;
+    font-size: 1.5rem;
+    margin: 20px auto;
+}
+}

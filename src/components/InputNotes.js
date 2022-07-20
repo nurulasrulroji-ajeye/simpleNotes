@@ -21,7 +21,7 @@ class NotesInput extends React.Component {
     this.setState((prevState) => {
       const charMax = 45;
       const inputTitle = e.target.value.slice(0, charMax);
-      const lenghtTitleInput = inputTitle.lenght;
+      const lenghtTitleInput = inputTitle.length;
       return {
         ...prevState,
         title: inputTitle,
@@ -42,7 +42,7 @@ class NotesInput extends React.Component {
   }
 
   onSumbitEventHandler(e) {
-    e.prventDefault();
+    e.preventDefault();
     const { title, body } = this.state;
     if (title === "" && body === "") {
       this.setState((prevState) => {
@@ -73,7 +73,7 @@ class NotesInput extends React.Component {
           ...prevState,
           title: "",
           body: "",
-          limitChar: 50
+          limitChar: 45
         };
       });
     }
@@ -82,12 +82,22 @@ class NotesInput extends React.Component {
   render() {
     return (
       <div className='body-input'>
-        <h2>Add Notes</h2>
-        <form onSubmit={(e) => { this.onSumbitEventHandler(e) }} className='notes-input'>
+        <h2 className='judul-input'>Add Notes</h2>
+        <form onSubmit={this.onSumbitEventHandler} className='notes-input'>
           <div>
-            <p>Limit Character : {this.state.limitChar}</p>
+            <p className='limit-char'>Limit Character :<span>{this.state.limitChar}</span></p>
+            {
+              this.state.isEmptyTitle ? (
+                <p className='empty-title'>Title cannot be empty!</p>
+              ) : null
+            }
           </div>
-          <input type="text" id='title' name='title' value={this.state.title} onChange={this.onTitleChangeEventHandler} placeholder='Note Title Here ...' />
+          <input className='form-input-note' type="text" name='title' value={this.state.title} onChange={this.onTitleChangeEventHandler} placeholder='Note Title Here ...' />
+          {
+            this.state.isEmptyBody ? (
+              <p className='empty-Body'>Notes cannot be empty!</p>
+            ) : null
+          }
           <textarea type="text" value={this.state.body} onChange={this.onBodyChangeEventHandler} placeholder='write your notes here ...' />
           <button type='sumbit'>Add Notes</button>
         </form>

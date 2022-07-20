@@ -1,4 +1,5 @@
 import React from 'react';
+import NoteHeader from './components/NoteHeader';
 import NotesBody from './components/NotesBody';
 import './styles.css'
 
@@ -12,6 +13,7 @@ class NotesApps extends React.Component {
     this.onAddNoteHandler = this.onAddNoteHandler.bind(this);
     this.onDeleteNotesHandler = this.onDeleteNotesHandler.bind(this);
     this.onArchivedNotesHandler = this.onArchivedNotesHandler.bind(this);
+    this.onSearchNoteHandler = this.onSearchNoteHandler.bind(this);
   }
 
   onAddNoteHandler({ title, body }) {
@@ -44,13 +46,22 @@ class NotesApps extends React.Component {
     return this.setState({ notes });
   }
 
+  onSearchNoteHandler(e) {
+    this.setState((prevState) => {
+      return {
+        ...prevState,
+        query: e.target.value
+      };
+    });
+  }
+
   render() {
     return (
       <div className='notes-apps'>
-        <h1>Personal Notes Apps</h1>
+        <NoteHeader onSearch={this.onSearchNoteHandler} query={this.state.query} />
         <NotesBody
           notes={this.state.notes}
-          addNotes={this.onAddNotesHandler}
+          addNotes={this.onAddNoteHandler}
           onDelete={this.onDeleteNotesHandler}
           onArchive={this.onArchivedNotesHandler}
           query={this.state.query}
