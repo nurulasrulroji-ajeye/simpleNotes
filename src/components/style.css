@@ -1,0 +1,94 @@
+.body-input{
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  background-color: 'transparent';
+  align-items: center;
+}
+.notes-input{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  max-width: 80%;
+  box-sizing: border-box;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+input{
+  box-sizing: border-box;
+  background-color: transparent;
+  color: #ffd600;
+  padding: 8px;
+  border: 1px solid #26001b;
+  box-shadow: 1px 1px 2px #ffd600;
+  transition: all  .5s ease-in-out;
+}
+
+input:focus {
+  background-color: #ffd600;
+  color: #26001B;
+  outline: none;
+  border: none;
+  box-shadow: 5px 5px #26001B;
+  font-weight: 800;
+  transition: all .5s ease-in-out;
+}
+
+input::placeholder{
+  color: #fff700c6;
+  font-size: 12px;
+  font-weight: 200;
+  text-transform: lowercase;
+}
+
+textarea{
+  max-width: 100%;
+  height: 80px;
+  max-height: 120px;
+  margin: 10px 0;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: #ffd600;
+  padding: 8px;
+  border: 1px solid #26001b;
+  box-shadow: 1px 1px 2px #ffd600;
+  transition: all  .5s ease-in-out;
+}
+
+textarea:focus{
+  background-color: #ffd600;
+  color: #26001B;
+  outline: none;
+  border: none;
+  box-shadow: 5px 5px #26001B;
+  font-weight: 800;
+  transition: all .5s ease-in-out;
+}
+
+textarea::placeholder{
+  color: #ffd600;
+}
+
+.notes-input button{
+  padding: 10px 20px;
+  margin-top: 10px;
+  width: 20%;
+  box-sizing: border-box;
+  background-color: transparent;
+  box-shadow: 1px 1px 5px #ffd500b4;
+  margin-left: 80%;
+  color: #FFF600;
+  font-weight: bold;
+  border: 1px solid #ffd600;
+  cursor: pointer;
+}
+
+.notes-input button:hover {
+  background-color: #ffd600;
+  color: #26001B;
+  font-weight: bold;
+  box-shadow: 5px 5px #26001B;
+  transition: all .5s ease-in-out;
+}
